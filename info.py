@@ -102,7 +102,7 @@ if 'DYNO' in environ:
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'https://manjotsidhu0-7f6cca549967.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN') else APP_NAME+'https://manjotsidhu0-7f6cca549967.herokuapp.com/'
 URL = "https://manjotsidhu0-7f6cca549967.herokuapp.com/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "https://manjotsidhu0-7f6cca549967.herokuapp.com/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
